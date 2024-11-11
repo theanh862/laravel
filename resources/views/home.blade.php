@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    <a href="{{ route('login') }}">Đăng nhập</a>
+
+
+
+
     <h1>Danh Sách Danh Mục</h1>
     <div class="row">
         @foreach($categories as $category)
