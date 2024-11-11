@@ -60,8 +60,9 @@ class AuthController extends Controller
 
     // Xử lý đăng xuất
     public function logout()
-    {
-        Auth::logout();
-        return redirect('/');
-    }
+{
+    Auth::logout(); // Đăng xuất người dùng
+    return redirect('/')->with('success', 'Đăng xuất thành công!'); // Chuyển hướng về trang chủ với thông báo thành công
+}
+
 }

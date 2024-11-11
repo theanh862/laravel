@@ -137,4 +137,13 @@ class ProductController extends Controller
     return view('products.index', compact('products'));
 }
 
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $categories = Category::where('name', 'LIKE', "%$query%")->get();
+
+        return view('search-results', compact('categories'));
+    }
+
+
 }

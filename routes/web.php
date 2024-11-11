@@ -37,3 +37,5 @@ Route::post('/register', [AuthController::class, 'register']);
 
 // Route để đăng xuất
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+// route tìm kiếm
+Route::get('/search', [ProductController::class, 'search'])->name('search');

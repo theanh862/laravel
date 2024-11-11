@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="{{ route('login') }}">Đăng nhập</a>
 
 
-
+<form action="{{ route('search') }}" method="GET">
+    <input type="text" name="query" placeholder="Tìm kiếm danh mục sản phẩm...">
+    <button type="submit">Tìm kiếm</button>
+</form>
 
     <h1>Danh Sách Danh Mục</h1>
     <div class="row">
